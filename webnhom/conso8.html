@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var path = window.location.pathname; 
+            $('.h_menu a').each(function(){
+            var href = new URL(this.href).pathname;
+                if(path == href) { 
+                    $(this).closest('li').addClass('active');
+                } else {
+                    $(this).closest('li').removeClass('active');
+                }
+            });
+        });
+    </script>
+    <style>
+    #header{
+        height: 80px;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    .logo {
+        margin-left: 100px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 300px;
+    }
+    .logo a {
+        color: #ec4899;
+        text-decoration: none;
+        font-size: larger;
+    }
+    .h_menu{
+        margin-right: 100px;
+    }
+    .h_menu ul{
+        list-style-type: none;
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+    }
+    .h_menu li{
+        line-height: 40px;
+        height: 40px;
+        width: 140px;
+        margin-left: -5px;
+        display: inline-block;
+        position: relative;
+    }
+    .h_menu a{
+        text-decoration: none;
+        display: block;
+        color: black;
+        font-size: larger;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0,0,0,0)
+    }
+    .h_menu a:hover {
+        background-color: #7e468e;
+        color: rgb(0, 0, 0);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .h_menu a.active {
+        color: #ec4899;
+        border-bottom: 2px solid red;
+    }
+    .h_menu a:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 10px rgba(30, 27, 27, 0.2);
+    }
+    .content {
+        font-family: Arial, sans-serif;
+        width: 80%;
+        margin:0 auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        padding-top: 100px;
+        margin-bottom: 40px;
+    }
+    .content h2 {
+        color: #333;
+        margin-top: 0;
+    }
+    .content p {
+        color: #666;
+        line-height: 1.6;
+    }
+    .footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-section {
+        flex: 1;
+        text-align: center;
+    }
+
+    .footer h4 {
+        font-family: Merriweather, serif;
+        margin-bottom: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 5px;
+    }
+    .footer-section p a {
+        color: inherit;
+        text-decoration: none;
+        margin-right: 10px;
+    }
+
+    .footer-section a:hover {
+        color: #ec4899;
+    }
+</style>
+</head>
+<body>
+    <div id="header">
+        <div class="logo">
+            <img src="infinity_.png">
+            <a href="trangchu.html"><h2>Thần số học</h2></a>
+        </div>
+        <div class="h_menu">
+            <ul>
+                <li><a href="trangchu.html" >Trang chủ</a></li>
+                <li><a href="gioithieu.html">Giới thiệu</a></li>
+                <li><a href="tracuu.html" id="menu-lookup"class="active">Tra cứu</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <img src="anhso8.jpg" alt="" style="width: 300px; height: 300px; object-fit: cover;margin-left: 37%;">
+        <h1 style="text-align: center;">Ý nghĩa của con số 8 đối với bạn</h1>
+        <h2>Tính cách</h2>
+        <p>Con số 8 thường được liên kết với sự thành công và quyền lực. Những người mang con số này thường có tham vọng lớn và khả năng lãnh đạo mạnh mẽ.</p>
+        <p>Họ có khả năng tập trung cao độ và thường đạt được thành công về mặt tài chính. Sự kiên định và khả năng quản lý tài chính của họ là những đặc điểm nổi bật.</p>
+        <p>Con số 8 còn biểu thị cho sự cân bằng giữa thế giới vật chất và tinh thần, họ luôn tìm cách hài hòa giữa hai khía cạnh này trong cuộc sống.</p>
+        <h2>Điểm mạnh của bạn</h2>
+        <p>Có tinh thần trách nhiệm cao: Số 8 mang ý nghĩa của sự vô hạn, biểu tượng cho sức mạnh về tài chính và quyền lực. Người mang số 8 có tinh thần trách nhiệm cao, luôn nỗ lực phấn đấu để đạt được mục tiêu của mình. Họ cũng có khả năng lãnh đạo và phân tích tốt.</p>
+        <p>Khả năng làm chủ cuộc sống: Người mang số 8 có tính cách độc lập, tự tin và tự làm chủ cuộc sống của mình. Họ luôn biết cách cân bằng giữa công việc và cuộc sống, luôn sẵn sàng đối mặt với những thử thách và khó khăn.</p>
+        <p>Khả năng thích ứng: Con số chủ đạo này có khả năng thích ứng linh hoạt với những thay đổi trong cuộc sống. Họ luôn sẵn sàng học hỏi và tìm kiếm những cơ hội mới để phát triển bản thân.</p>
+        <h2>Điểm yếu của bạn</h2>
+        <p>Sự quyết đoán đến mức cứng đầu: Người mang số 8 có bản lĩnh và sự kiên định cao. Tuy nhiên, đôi khi họ kiên định quá mức với những suy nghĩ và lý tưởng của mình. Điều này có thể ảnh hưởng tiêu cực đến sự nghiệp và cuộc sống của họ.</p>
+        <p>Chú trọng quá mức vào tiền tài và vật chất: Mục tiêu lớn nhất của người có thần số học số 8 là đạt được thành công và quyền lực, vì vậy nếu họ “đi quá xa” sẽ dễ dàng quên đi mất những giá trị khác trong cuộc sống.</p>
+        <p>Tính kiểm soát cao: Số 8 những con người có tính cách độc lập, tự tin và có xu hướng thích kiểm soát mọi thứ. Do đó có thể khiến họ trở nên áp đặt và khó chịu đối với những người xung quanh.</p>
+        <h2>Những người nổi tiếng có con số 8</h2>
+        <p>Naomi Campbell</p>
+        <p>Whoopi Goldberg</p>
+        <p>Elizabeth Taylor</p>
+        <p>Sandra Bullock</p>
+        <p>Một vài người khác như: Joni Mitchell, Barbara Streisand, Pablo Picasso, Michelangelo, Matt Damon</p>
+        <h2>Mối quan hệ tương thích</h2>
+        <strong>Những số đường đời tương thích nhất với bạn: Số 2, 4, 6</strong>
+        <p>Số 2: Con số 8 và số 2 có thể tạo nên một mối quan hệ hài hòa, nơi cả hai đều chia sẻ lòng trắc ẩn và sự quan tâm sâu sắc đến người khác.</p>
+        <p>Số 4: Con số 8 và số 4 đều rất tập trung vào thế giới vật chất, họ có thể hiểu sâu sắc về cách thức hoạt động của đối phương.</p>
+        <p>Số 6: Con số 8 và số 6 có thể tạo nên một mối quan hệ cân bằng, nơi số 6 có thể giúp số 8 kết nối với phía tình cảm của mình.</p>
+        <strong>Những số đường đời ít tương thích nhất với bạn: Số 1, 2, 3, 9 </strong>
+        <p>Số 1: Bạn và số 1 có thể gặp khó khăn trong việc hợp tác do cả hai đều có xu hướng lãnh đạo và muốn kiểm soát. Mỗi người đều có quan điểm và phương pháp tiếp cận riêng, điều này có thể dẫn đến xung đột.</p>
+        <p>Số 3: Số 8 và số 3 có thể không tương thích do số 8 nghiêm túc và thực tế, trong khi số 3 thích sự tự do và sáng tạo, điều này có thể tạo ra sự không hiểu biết lẫn nhau.</p>
+        <p>Số 9: Số 8 và số 9 có thể không tương thích do số 8 tập trung vào sự thịnh vượng</p>
+        <h2>Màu sắc phù hợp:</h2>
+        <p>Màu đen: Tượng trưng cho trí thông minh và uy quyền. Thể hiện sự sang trọng, tinh tế, tạo cảm giác quyền lực, khiến mọi người nể phục. Tuy nhiên, màu sắc này cũng hấp thụ năng lượng tiêu cực và áp đảo.</p>
+        <p>Màu xanh đen: Mang cảm giác uy quyền và sức mạnh tương tự màu đen, tuy nhiên nó gợi lên cảm giác bình tĩnh, thư thái trong tâm trí.</p>
+        <h2>Nghề nghiệp phù hợp</h2>
+        <p>Giám đốc điều hành: Với khả năng lãnh đạo và tư duy chiến lược, con số 8 phù hợp với vị trí quản lý cấp cao.</p>
+        <p>Doanh nhân: Tham vọng và khả năng chấp nhận rủi ro tự nhiên giúp họ trở thành doanh nhân thành công.</p>
+        <p>Tư vấn tài chính: Với tình yêu với tài chính, họ có thể trở thành những cố vấn tài chính xuất sắc.</p>
+        <p>Phát triển bất động sản: Khả năng thương thuyết và thuyết phục giúp họ phù hợp với việc phát triển bất động sản.</p>
+        <p>Luật sư: Đam mê công lý và khả năng giao tiếp mạnh mẽ làm cho lĩnh vực luật phù hợp với con số 8.</p>
+    </div>
+    <div class="footer">
+        <div class="footer-section">
+            <h4>Giới thiệu</h4>
+            <p>Trang web của chúng tôi cung cấp kiến thức về thần số học và giúp bạn khám phá sức mạnh của số và vận mệnh.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Liên hệ</h4>
+            <p>Email: info@thansohoc.com</p>
+            <p>Số điện thoại: +84 123456789</p>
+        </div>
+        <div class="footer-section">
+            <h4>Theo dõi chúng tôi</h4>
+            <p><a href="#">Facebook</a></p>
+            <p><a href="#">Twitter</a></p>
+            <p><a href="#">Instagram</a></p>
+        </div>
+    </div>
+</body>
+</html>

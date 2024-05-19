@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var path = window.location.pathname; 
+            $('.h_menu a').each(function(){
+            var href = new URL(this.href).pathname;
+                if(path == href) { 
+                    $(this).closest('li').addClass('active');
+                } else {
+                    $(this).closest('li').removeClass('active');
+                }
+            });
+        });
+    </script>
+    <style>
+    #header{
+        height: 80px;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    .logo {
+        margin-left: 100px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 300px;
+    }
+    .logo a {
+        color: #ec4899;
+        text-decoration: none;
+        font-size: larger;
+    }
+    .h_menu{
+        margin-right: 100px;
+    }
+    .h_menu ul{
+        list-style-type: none;
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+    }
+    .h_menu li{
+        line-height: 40px;
+        height: 40px;
+        width: 140px;
+        margin-left: -5px;
+        display: inline-block;
+        position: relative;
+    }
+    .h_menu a{
+        text-decoration: none;
+        display: block;
+        color: black;
+        font-size: larger;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0,0,0,0)
+    }
+    .h_menu a:hover {
+        background-color: #7e468e;
+        color: rgb(0, 0, 0);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .h_menu a.active {
+        color: #ec4899;
+        border-bottom: 2px solid red;
+    }
+    .h_menu a:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 10px rgba(30, 27, 27, 0.2);
+    }
+    .content {
+        font-family: Arial, sans-serif;
+        width: 80%;
+        margin:0 auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        padding-top: 100px;
+        margin-bottom: 40px;
+    }
+    .content h2 {
+        color: #333;
+        margin-top: 0;
+    }
+    .content p {
+        color: #666;
+        line-height: 1.6;
+    }
+    .footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-section {
+        flex: 1;
+        text-align: center;
+    }
+
+    .footer h4 {
+        font-family: Merriweather, serif;
+        margin-bottom: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 5px;
+    }
+    .footer-section p a {
+        color: inherit;
+        text-decoration: none;
+        margin-right: 10px;
+    }
+
+    .footer-section a:hover {
+        color: #ec4899;
+    }
+</style>
+</head>
+<body>
+    <div id="header">
+        <div class="logo">
+            <img src="infinity_.png">
+            <a href="trangchu.html"><h2>Thần số học</h2></a>
+        </div>
+        <div class="h_menu">
+            <ul>
+                <li><a href="trangchu.html" >Trang chủ</a></li>
+                <li><a href="gioithieu.html">Giới thiệu</a></li>
+                <li><a href="tracuu.html" id="menu-lookup"class="active">Tra cứu</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <img src="anhso3.jpg" alt="" style="width: 300px; height: 300px; object-fit: cover;margin-left: 37%;">
+        <h1 style="text-align: center;">Ý nghĩa của con số 3 đối với bạn</h1>
+        <h2>Tính cách</h2>
+        <p>Tham vọng, may mắn, năng động.</p>
+        <p>Khôn khéo, tháo vát, vui vẻ, thân thiện; nhiệt tình và trung thành.</p>
+        <p>Nghệ sĩ, bóng bẩy.</p>
+        <p>Nông nổi, nói dối, cường điệu, hoang phí, xu nịnh; bộc trực, nóng giận, hay thay đổi.</p>
+        <h2>Điểm mạnh của bạn</h2>
+        <p>Bạn thích sự sáng tạo, giao thiệp, và kết nối mọi người. Điều đó làm cho bạn có được năng lực truyền đạt tuyệt vời. </p>
+        <p>Bạn lạc quan, vô cùng rộng lượng. Bạn là tuýp người đặc biệt hài hước. Bạn thường là “cây hài” trong các nhóm, mang tới không khí tươi vui, rộn ràng cho mọi người với bộ sưu tập các câu chuyện hài hước phong phú. </p>
+        <p>Thêm vào đó, bạn thường cực kỳ tinh tế trong việc nắm bắt tâm lý người khác. </p>
+        <p>Bạn yêu thích môi trường mà ở đó con người được tạo điều kiện để trao đổi, phối hợp, tương tác với nhau. Khi gặp được môi trường như vậy, bạn sẽ phát huy được những thế mạnh và làm việc hiệu quả hơn, ngẫu hứng hơn. </p>
+        <p>Trong các mối quan hệ cá nhân, bạn thuộc tuýp người lãng mạn, rất chung thủy và khó lòng quên được những hình bóng cũ. Thậm chí khi mọi chuyện đã kết thúc, bạn vẫn không thể từ bỏ.</p>
+        <h2>Điểm yếu của bạn</h2>
+        <p>Bởi do thích thú việc sống hết mình, bạn dường như chỉ sống cho hôm nay và không nghĩ đến ngày mai. Bạn có khoảng thời gian khó khăn để trở thành một người biết nhận trách nhiệm một cách nghiêm túc. Việc quản lý tiền bạc dường như không tốt cho lắm bởi một phần bạn cảm thấy rất tích cực về cuộc sống và nghĩ rằng mọi thứ rồi cũng sẽ tốt đẹp. Thỉnh thoảng, điều này có thể khiến bạn sống hời hợt, trì hoãn và thiếu định hướng trong cuộc sống.</p>
+        <p>Khi cao hứng, bạn thường có thể bị cảm xúc cuốn đi quá xa. Hãy cẩn thận khi nhận thấy mình ở trạng thái đó, bởi vì khi đó những điều bạn nói ra có thể không hoàn toàn đúng sự thật. Chủ yếu là do bạn muốn làm cho điều gì đó nổi bật lên, hấp dẫn hơn.</p>
+        <p>Bạn cũng có thể dễ dàng bị rơi vào trạng thái mất hứng, chán nản và thay đổi.</p>
+        <p>Đôi khi bạn có thể bị sự tùy hứng làm ảnh hưởng đến hiệu quả công việc. Vì vậy hãy tạo cho mình thói quen lên kế hoạch, mục tiêu chặt chẽ và thường xuyên kiểm tra lại để không đi chệch hướng. </p>
+        <p>Bạn sẽ không phù hợp với những môi trường làm việc nhàm chán, đơn điệu hoặc gò bó. Bạn thích những môi trường làm việc có sự tương tác, giao tiếp, có cảm hứng và sự vui vẻ. Bạn cũng có thể trở nên khó tính, sốt ruột nếu làm việc với ai đó chậm chạp, ù lì. Những điều này có thể khiến bạn dễ chán công việc, dẫn tới tình trạng thay đổi công việc khá nhiều. </p>
+        <h2>Những người nổi tiếng có con số 3:</h2>
+        <p>Jackma – Chủ tịch tập đoàn Alibaba</p>
+        <p>Đặng Lê Nguyên Vũ – Chủ tịch tập đoàn Trung Nguyên </p>
+        <p>Một vài người khác như: Christina Aguilera, David Bowie, Hillary Clinton, Jimmy Buffett, Jodie Foster, John Travolta, Pierce Brosnan, Shania Twain, Snoop Dogg </p>
+        <h2>Mối quan hệ tương thích</h2>
+        <strong>Những số đường đời tương thích nhất với bạn: Số 10, 2, 5, 6</strong>
+        <p>Số 10: Khi đường đời số 10 và số 3 kết hợp với nhau, rất khó để tìm ra quá nhiều điểm tiêu cực. Bạn làm rất tốt công việc ghi nhận người khác và tất cả những thành tích của họ. Còn số 10 làm tốt nhiệm vụ thúc đẩy bạn cố gắng và nỗ lực. Chủ nghĩa cá nhân của số 10 kết hợp với tính cách sẵn sàng thử sức với những lĩnh vực mới của bạn tạo nên mối quan hệ tuyệt vời, thú vị và mạo hiểm.</p>
+        <p>Số 2: Bạn và người mang số đường đời 2 có một mối quan hệ gắn kết. Số 2 sẽ biết cách quan tâm đến cảm xúc của bạn. Sự hài hước và sáng tạo của bạn cũng sẽ được số 2 đón nhận một cách tích cực. Bạn luôn thích được khen ngợi và công nhận, bạn sẽ có được điều đó nếu duy trì mối quan hệ với số 2. </p>
+        <p>Số 5: Mặc dù đây không phải là một mối quan hệ được đảm bảo an toàn, nhưng khi bạn và người số 5 bên nhau sẽ có rất nhiều sự phấn khích. Trong mối quan hệ hợp tác này, mỗi người thúc đẩy người kia thành công cả về mặt tình cảm và công việc. Hai bạn cũng có khoảng thời gian cùng nhau rất đáng nhớ vì cả hai đều thích du lịch, thích những điều mới mẻ, điều này khiến mối quan hệ của hai người không bao giờ nhàm chán.</p>
+        <p>Số 6: Bạn và người mang số đường đời số 6 là hai mảnh ghép hoàn hảo. Bạn có tính sáng tạo và khiếu hài hước, số 6 ngoài sự sáng tạo còn mang trong mình sự ấm áp, tình yêu. Số 6 sẽ khiến bạn có cảm giác an toàn và là nơi bạn có thể tin tưởng chia sẻ mọi điều trong cuộc sống. Bạn hoàn toàn có thể sống với tính cách trẻ con của mình khi ở bên số 6.</p>
+        <strong>Những số đường đời ít tương thích nhất với bạn: số 4, 8</strong>
+        <p>Số 4: Đối với bạn, mối quan hệ với người có số 4 có thể coi là một vùng cấm.</p>
+        <p>Số 8: Những người có đường 8 hoặc sẽ thu hút sự chú ý của bạn, vì ngoại hình và phong thái uy quyền của họ. Tuy nhiên, những lời chỉ trích liên tục từ họ sẽ khiến bạn rơi vào trạng thái mất ổn định. Số 8 sẽ khiến bạn cảm thấy áp lực vì sự thực tế và vật chất quá mức. Yếu điểm cả thèm chóng chán của bạn hoàn toàn không phù hợp với số 8. </p>
+        <h2>Màu sắc phù hợp</h2>
+        <p>Vàng: Màu vàng liên quan đến sự tươi mới, sự phát triển và hy vọng. Nó phản ánh tính cách lạc quan và sự kiên nhẫn của số 3.</p>
+        <p>Cam: Màu cam thể hiện sự nhiệt huyết và sự sáng tạo. Nó phù hợp với tính cách sáng tạo của số 3.</p>
+        <h2>Nghề nghiệp phù hợp</h2>
+        <p>Nhiếp ảnh gia:Đây là công việc đòi hỏi sự nhiệt huyết không ngơi nghỉ, tinh thần sáng tạo, yêu cái đẹp và khả năng thẩm mỹ tốt. Những người mang Thần số học 3 nghề nghiệp hoàn toàn có thể đáp ứng được những điều này.</p>
+        <p>Đạo diễn:Nếu tư duy nghệ thuật của những người mang Thần số học số 3 nghề nghiệp còn đi kèm thêm sự nhạy cảm với cảm xúc và tinh tế trong hành động, họ hoàn toàn có thể cân nhắc việc trở thành đạo diễn.</p>
+        <p>Kiến trúc sư:Tính sáng tạo, yêu cái đẹp của họ lại chứng minh .Nếu người mang con số chủ đạo 3 có ước mơ góp phần thực hiện nên các đại công trình, hãy đừng ngần ngại biến mình thành các kiến trúc sư tài ba.</p>
+        <p>Chuyên viên tiếp thị:Marketing và tiếp thị đang là xu hướng phát triển ở tất cả các ngành nghề trong xã hội. Vì thế, khi trở thành một chuyên viên tiếp thị hoặc một marketer, những người mang Thần số học số 3 nghề nghiệp vừa tận dụng được khả năng giao tiếp linh hoạt.</p>
+        <p>Hướng dẫn viên du lịch:Dẫn dắt, giới thiệu, khiến người xem thích thú là công việc của một hướng dẫn viên du lịch, tình cờ thay, đó cũng chính là điểm mạnh của những người mang Thần số học số 3 nghề nghiệp.</p>
+    </div>
+    <div class="footer">
+        <div class="footer-section">
+            <h4>Giới thiệu</h4>
+            <p>Trang web của chúng tôi cung cấp kiến thức về thần số học và giúp bạn khám phá sức mạnh của số và vận mệnh.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Liên hệ</h4>
+            <p>Email: info@thansohoc.com</p>
+            <p>Số điện thoại: +84 123456789</p>
+        </div>
+        <div class="footer-section">
+            <h4>Theo dõi chúng tôi</h4>
+            <p><a href="#">Facebook</a></p>
+            <p><a href="#">Twitter</a></p>
+            <p><a href="#">Instagram</a></p>
+        </div>
+    </div>
+</body>
+</html>

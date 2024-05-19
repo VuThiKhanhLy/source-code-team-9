@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var path = window.location.pathname; 
+            $('.h_menu a').each(function(){
+            var href = new URL(this.href).pathname;
+                if(path == href) { 
+                    $(this).closest('li').addClass('active');
+                } else {
+                    $(this).closest('li').removeClass('active');
+                }
+            });
+        });
+    </script>
+    <style>
+    #header{
+        height: 80px;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    .logo {
+        margin-left: 100px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 300px;
+    }
+    .logo a {
+        color: #ec4899;
+        text-decoration: none;
+        font-size: larger;
+    }
+    .h_menu{
+        margin-right: 100px;
+    }
+    .h_menu ul{
+        list-style-type: none;
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+    }
+    .h_menu li{
+        line-height: 40px;
+        height: 40px;
+        width: 140px;
+        margin-left: -5px;
+        display: inline-block;
+        position: relative;
+    }
+    .h_menu a{
+        text-decoration: none;
+        display: block;
+        color: black;
+        font-size: larger;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0,0,0,0)
+    }
+    .h_menu a:hover {
+        background-color: #7e468e;
+        color: rgb(0, 0, 0);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .h_menu a.active {
+        color: #ec4899;
+        border-bottom: 2px solid red;
+    }
+    .h_menu a:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 10px rgba(30, 27, 27, 0.2);
+    }
+    .content {
+        font-family: Arial, sans-serif;
+        width: 80%;
+        margin:0 auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        padding-top: 100px;
+        margin-bottom: 40px;
+    }
+    .content h2 {
+        color: #333;
+        margin-top: 0;
+    }
+    .content p {
+        color: #666;
+        line-height: 1.6;
+    }
+    .footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-section {
+        flex: 1;
+        text-align: center;
+    }
+
+    .footer h4 {
+        font-family: Merriweather, serif;
+        margin-bottom: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 5px;
+    }
+    .footer-section p a {
+        color: inherit;
+        text-decoration: none;
+        margin-right: 10px;
+    }
+
+    .footer-section a:hover {
+        color: #ec4899;
+    }
+</style>
+</head>
+<body>
+    <div id="header">
+        <div class="logo">
+            <img src="infinity_.png">
+            <a href="trangchu.html"><h2>Thần số học</h2></a>
+        </div>
+        <div class="h_menu">
+            <ul>
+                <li><a href="trangchu.html" >Trang chủ</a></li>
+                <li><a href="gioithieu.html">Giới thiệu</a></li>
+                <li><a href="tracuu.html" id="menu-lookup"class="active">Tra cứu</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <img src="anhso7.jpg" alt="" style="width: 300px; height: 300px; object-fit: cover;margin-left: 37%;">
+        <h1 style="text-align: center;">Ý nghĩa của con số 7 đối với bạn</h1>
+        <h2>Tính cách</h2>
+        <p>Họ thường rất sáng tạo và có khả năng suy luận logic tốt.</p>
+        <p>Rất nhạy cảm nên họ có thể đọc hiểu suy nghĩ của người khác một cách sâu sắc.</p>
+        <p>Số 7 có tính cách lý tưởng rất cao. Họ tin tưởng vào các giá trị tinh thần và đạo đức, đồng thời luôn tìm kiếm sự hoàn thiện trong cuộc sống.</p>
+        <h2>>Điểm mạnh của bạn</h2>
+        <p>Sự tỉ mỉ: Người có số chủ đạo 7 thường rất tỉ mỉ và có khả năng tổ chức công việc một cách hiệu quả. Họ luôn đặt mục tiêu và lập kế hoạch chi tiết để đạt được những thành công trong cuộc sống.</p>
+        <p>Kiến thức sâu rộng: Số chủ đạo 7 tượng trưng cho người có kiến thức sâu rộng về nhiều lĩnh vực khác nhau. Họ thường là những người thông minh và luôn cố gắng nỗ lực để hoàn thiện kiến thức của mình.</p>
+        <p>Trí tuệ logic: Số 7 đại diện cho những người có trí tuệ logic cao và có khả năng phân tích. Họ là những người quan sát tốt, đồng thời giải quyết vấn đề một cách nhanh chóng. </p>
+        <p>Sự kiên nhẫn: Một đặc điểm nổi bật của con số 7 là tính kiên nhẫn. Dù là công việc lớn hay nhỏ, họ luôn kiên trì và không bỏ cuộc để đạt được mục tiêu đã đề ra.</p>
+        <h2>Điểm yếu của bạn</h2>
+        <p>Khó hòa đồng: Người có số chủ đạo 7 thường khó hoà đồng và có thể gặp khó khăn trong việc xây dựng các mối quan hệ. Họ luôn tỏ ra nghiêm túc và ít khi tham gia vào các hoạt động xã hội.</p>
+        <p>Mất cân bằng giữa công việc và cuộc sống: Vì quá chú trọng vào công việc, người có số chủ đạo 7 có thể mất cân bằng giữa công việc và cuộc sống cá nhân.</p>
+        <p>Tính hoàn mỹ và cứng nhắc: Người có số chủ đạo 7 có xu hướng hoàn mỹ hoá và cứng nhắc trong việc giải quyết vấn đề.</p>
+        <h2>Những người nổi tiếng có con số 7</h2>
+        <p>Tổng thống Nga Putin</p>
+        <p>Tỷ phú Elon Musk </p>
+        <p>Nữ hoàng vương quốc Anh Elizabeth</p>
+        <p>Một vài người khác như:Johnny Depp ,Taylor Swift, Stephen Hawking,..</p>
+        <h2>Mối quan hệ tương thích</h2>
+        <strong>Những số đường đời tương thích nhất với bạn:số 1, 4, 5, 6, 9</strong>
+        <p>Hai con số 6 và 9 thường được biết đến là những con số có tính cách nóng nảy và thẳng tính, chính vì thế khi mà ở cạnh con số 7 sẽ được sự bình yên của con số 7 dung hòa sự nóng nảy của bản thân.</p>
+        <strong>Những số đường đời ít tương thích nhất với bạn: Số 1, 8</strong>
+        <p>Số 1: thường biểu thị sự lãnh đạo, sức mạnh và tự tin. Sự sâu sắc và tìm kiếm tri thức của số 7 có thể xung đột với tính cách quyết đoán và quyền lực của số 1.</p>
+        <p>Số 8: thường được liên kết với thành công về mặt vật chất và quyền lực. Sự sâu sắc và tinh thần nghiên cứu của số 7 có thể không hòa hợp với sự tập trung vào thành tựu vật chất của số 8.</p>
+        <h2>Màu sắc phù hợp</h2>
+        <p>Màu xanh lam: rất phù hợp với tính cách của những người mang số 7 chủ đạo. Màu xanh tượng trưng cho bản chất điềm tĩnh, trầm lặng và cân bằng trong cuộc sống</p>
+        <p>Màu tím: số 7 mang năng lượng tâm linh màu tím phù hợp để nâng cao trường năng lượng xung quanh của mình.</p>
+        <h2>Nghề nghiệp phù hợp</h2>
+        <p>Nhà nghiên cứu</p>
+        <p>Nhà văn hoặc nhà báo</p>
+        <p>Nhà thiết kế</p>
+    </div>
+    <div class="footer">
+        <div class="footer-section">
+            <h4>Giới thiệu</h4>
+            <p>Trang web của chúng tôi cung cấp kiến thức về thần số học và giúp bạn khám phá sức mạnh của số và vận mệnh.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Liên hệ</h4>
+            <p>Email: info@thansohoc.com</p>
+            <p>Số điện thoại: +84 123456789</p>
+        </div>
+        <div class="footer-section">
+            <h4>Theo dõi chúng tôi</h4>
+            <p><a href="#">Facebook</a></p>
+            <p><a href="#">Twitter</a></p>
+            <p><a href="#">Instagram</a></p>
+        </div>
+    </div>
+</body>
+</html>

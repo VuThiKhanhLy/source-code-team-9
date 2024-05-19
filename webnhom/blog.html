@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var path = window.location.pathname; 
+            $('.h_menu a').each(function(){
+            var href = new URL(this.href).pathname;
+                if(path == href) { 
+                    $(this).closest('li').addClass('active');
+                } else {
+                    $(this).closest('li').removeClass('active');
+                }
+            });
+        });
+    </script>
+    <style>
+    #header{
+        height: 80px;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    .logo {
+        margin-left: 100px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 300px;
+    }
+    .logo a {
+        color: #ec4899;
+        text-decoration: none;
+        font-size: larger;
+    }
+    .h_menu{
+        margin-right: 100px;
+    }
+    .h_menu ul{
+        list-style-type: none;
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+    }
+    .h_menu li{
+        line-height: 40px;
+        height: 40px;
+        width: 140px;
+        margin-left: -5px;
+        display: inline-block;
+        position: relative;
+    }
+    .h_menu a{
+        text-decoration: none;
+        display: block;
+        color: black;
+        font-size: larger;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0,0,0,0)
+    }
+    .h_menu a:hover {
+        background-color: #7e468e;
+        color: rgb(0, 0, 0);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .h_menu a.active {
+        color: #ec4899;
+        border-bottom: 2px solid red;
+    }
+    .h_menu a:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 10px rgba(30, 27, 27, 0.2);
+    }
+    .blog-post {
+        margin-bottom: 40px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 20px;
+    }
+    .blog-post h2 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 10px;
+    }
+    .blog-post p {
+        font-size: 16px;
+        color: #666;
+    }
+    .blog-post a {
+        display: inline-block;
+        color: #ec4899;
+        text-decoration: none;
+        margin-top: 10px;
+    }
+    .blog-post:hover {
+        background-color: #f3f3f3;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+
+    .blog-post h2:hover {
+        color: #ec4899;
+        text-decoration: underline;
+    }
+    
+    .blog-post a:hover {
+        color: #7e468e;
+        text-decoration: underline;
+    }
+    .footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-section {
+        flex: 1;
+        text-align: center;
+    }
+
+    .footer h4 {
+        font-family: Merriweather, serif;
+        margin-bottom: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 5px;
+    }
+    .footer-section p a {
+        color: inherit;
+        text-decoration: none;
+        margin-right: 10px;
+    }
+
+    .footer-section a:hover {
+        color: #ec4899;
+    }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="logo">
+            <img src="infinity_.png">
+            <a href="trangchu.html"><h2>Thần số học</h2></a>
+        </div>
+        <div class="h_menu">
+            <ul>
+                <li><a href="trangchu.html">Trang chủ</a></li>
+                <li><a href="gioithieu.html">Giới thiệu</a></li>
+                <li><a href="tracuu.html" id="menu-lookup">Tra cứu</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="content" style="margin-top: 80px; padding: 20px;">
+        <div class="blog-post">
+            <h2><a href="blogso9.html">Ý Nghĩa Con Số Chủ Đạo Số 9</a></h2>
+            <p>Con Số Chủ Đạo 9 là những người có tổng ngày sinh là 18, 27, 36, 45, viết là: Số 18/9, Số 27/9, Số 36/9, Số 45/9. Trong Thần Số Học số 9 là số có tinh thần phụng sự cho đi nhiều nhất.</p>
+            <a href="blogso9.html">Đọc thêm</a>
+        </div>
+
+        <div class="blog-post">
+            <h2><a href="blogso8.html">Ý Nghĩa Con Số Chủ Đạo Số 8</a></h2>
+            <p>Con Số Chủ Đạo 8 là những người có tổng ngày sinh là 17, 26, 35, viết là: Số 17/8, Số 26/8, Số 35/8. Trong Thần Số Học số 8 là số có năng lực điều hành và năng lực về tài chính tốt nhất.</p>
+            <a href="blogso8.html">Đọc thêm</a>
+        </div>
+
+        <div class="blog-post">
+            <h2><a href="blogso7.html">Ý Nghĩa Con Số Chủ Đạo Số 7</a></h2>
+            <p>Con Số Chủ Đạo 7 là những người có tổng ngày sinh là 16, 25, 34, 43, viết là: Số 16/7, Số 25/7, Số 34/7, Số 43/7. Trong Thần Số Học số 7 là số có sự uyên bác nhất.</p>
+            <a href="blogso7.html">Đọc thêm</a>
+        </div>
+
+        <div class="blog-post">
+            <h2><a href="blogso6.html">Ý Nghĩa Con Số Chủ Đạo Số 6</a></h2>
+            <p>Con Số Chủ Đạo 6 là những người có tổng ngày sinh là 15, 24, 33, 42, viết là: Số 15/6, Số 24/6, Số 33/6, Số 42/6. Trong Thần Số Học số 6 là số có nhiều tình yêu thương và trách nhiệm nhất.</p>
+            <a href="blogso6.html">Đọc thêm</a>
+        </div>
+
+        <div class="blog-post">
+            <h2><a href="blogso5.html">Ý Nghĩa Con Số Chủ Đạo Số 5</a></h2>
+            <p>Con Số Chủ Đạo 5 là những người có tổng ngày sinh là 14, 23, 32, 41, viết là: Số 14/5, Số 23/5, Số 32/5, Số 41/5. Trong Thần Số Học số 5 là số khao khát sự tự do nhất.</p>
+            <a href="blogso5.html">Đọc thêm</a>
+        </div>
+
+        <div class="blog-post">
+            <h2><a href="blogso4.html">Ý Nghĩa Con Số Chủ Đạo Số 4</a></h2>
+            <p>Con Số Chủ Đạo 4 là những người có tổng ngày sinh là 13, 31, 40, viết là: Số 13/4, Số 31/4, Số 40/4. Trong Thần Số Học số 4 được cho là con số có tính kỷ luật và cầu toàn nhất.</p>
+            <a href="blogso4.html">Đọc thêm</a>
+        </div>
+
+        <div class="blog-post">
+            <h2><a href="blogso3.html">Ý Nghĩa Con Số Chủ Đạo Số 3</a></h2>
+            <p>Con Số Chủ Đạo 3 là những người có tổng ngày sinh là 12, 21, 30, 39, 48, viết là: Số 12/3, Số 21/3, Số 30/3, Số 39/3, Số 48/3. Trong Thần Số Học, số 3 được cho là con số may mắn nhất.</p>
+            <a href="blogso3.html">Đọc thêm</a>
+        </div>
+
+        <div class="blog-post">
+            <h2><a href="blogso2.html">Ý Nghĩa Con Số Chủ Đạo Số 2</a></h2>
+            <p>Con Số Chủ Đạo 2 là những người có tổng ngày sinh là 11, 20, 29, viết là: Số 11/2, Số 20/2, Số 29/2. Trong Thần Số Học số 2 là số có trực giác tốt nhất, biểu thị sự nhạy bén, thấu hiểu và sự nhận biết.</p>
+            <a href="blogso2.html">Đọc thêm</a>
+        </div>
+        
+        <div class="blog-post">
+            <h2><a href="blogso1.html">Ý Nghĩa Con Số Chủ Đạo Số 1</a></h2>
+            <p>Con Số Chủ Đạo 1 là những người có tổng ngày sinh là 10, 19, 28, viết là: Số 10/1, Số 19/1, Số 28/1. Trong Thần Số Học số 1 là số biểu thị sự lãnh đạo, sự độc lập và sự sáng tạo.</p>
+            <a href="blogso1.html">Đọc thêm</a>
+        </div>
+
+    </div>
+    <div class="footer">
+        <div class="footer-section">
+            <h4>Giới thiệu</h4>
+            <p>Trang web của chúng tôi cung cấp kiến thức về thần số học và giúp bạn khám phá sức mạnh của số và vận mệnh.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Liên hệ</h4>
+            <p>Email: info@thansohoc.com</p>
+            <p>Số điện thoại: +84 123456789</p>
+        </div>
+        <div class="footer-section">
+            <h4>Theo dõi chúng tôi</h4>
+            <p><a href="#">Facebook</a></p>
+            <p><a href="#">Twitter</a></p>
+            <p><a href="#">Instagram</a></p>
+        </div>
+    </div>
+</body>
+</html>

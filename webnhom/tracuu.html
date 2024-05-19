@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var path = window.location.pathname; 
+            $('.h_menu a').each(function(){
+            var href = new URL(this.href).pathname;
+                if(path == href) { 
+                    $(this).closest('li').addClass('active');
+                } else {
+                    $(this).closest('li').removeClass('active');
+                }
+            });
+        });
+        $(document).ready(function(){
+            $('form').on('submit', function(e){
+                e.preventDefault();
+                var name = $('#name').val();
+                var dob = $('#dob').val();
+                if (!name) {
+                    alert('Vui lòng nhập tên của bạn.');
+                    return;
+                }
+                if (!dob) {
+                    alert('Vui lòng nhập ngày tháng năm sinh của bạn.');
+                    return;
+                }
+                dob = dob.split('-').join('');
+                var sum = 0;
+                for (var i = 0; i < dob.length; i++) {
+                    sum += parseInt(dob[i]);
+                }
+                while (sum > 9) {
+                    var temp = sum;
+                    sum = 0;
+                    while (temp > 0) {
+                        sum += temp % 10;
+                        temp = Math.floor(temp / 10);
+                    }
+                }
+                var num = sum;
+                var loading = document.getElementById('loading');
+                loading.style.display = 'flex';
+                setTimeout(function() {
+                    loading.style.display = 'none';
+                    // Hiển thị thông báo trước khi chuyển trang
+                    $('#notification').css('display', 'flex');
+                    $('#notification-text').text('Luận giải về con số của ' + name + ' đã hoàn tất');
+                    $('#notification-button').click(function() {
+                        $('#notification').css('display', 'none');
+                        window.location.href = 'conso' + num + '.html';
+                    });
+                }, 2000);
+            });
+        });
+
+    </script>
+    <style>
+    #header{
+        height: 80px;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    .logo {
+        margin-left: 100px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 300px;
+    }
+    .logo a {
+        color: #ec4899;
+        text-decoration: none;
+        font-size: larger;
+    }
+    .h_menu{
+        margin-right: 100px;
+    }
+    .h_menu ul{
+        list-style-type: none;
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+    }
+    .h_menu li{
+        line-height: 40px;
+        height: 40px;
+        width: 140px;
+        margin-left: -5px;
+        display: inline-block;
+        position: relative;
+    }
+    .h_menu a{
+        text-decoration: none;
+        display: block;
+        color: black;
+        font-size: larger;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0,0,0,0)
+    }
+    .h_menu a:hover {
+        background-color: #7e468e;
+        color: rgb(0, 0, 0);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .h_menu a.active {
+        color: #ec4899;
+        border-bottom: 2px solid red;
+    }
+    .h_menu a:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 10px rgba(30, 27, 27, 0.2);
+    }
+    #form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        background-image: url('anhtc.jpg');
+        background-size: cover;
+        padding: 50px;
+    }
+
+    .research {
+        width: 400px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        border: 1px solid #ccc;
+    }
+
+    .input-field, .button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .button {
+        background-color: #ec4899;
+        color: white;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .button:hover {
+        background-color: #7e468e;
+        transform: translateY(-2px); 
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+    #notification {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.4);
+        align-items: center;
+        justify-content: center;
+    }
+    #notification-content {
+        background-color: #fefefe;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 300px;
+        text-align: center;
+    }
+    #notification-content h2 {
+        margin-top: 0;
+    }
+    #notification-button {
+        color: white;
+        padding: 10px 20px;
+        background-color: #0367ae;
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+        margin-top: 20px;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        padding: 10px;
+    }
+
+    #content {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+        margin-bottom: 40px;
+    }
+
+    #content h1 {
+        color: #444;
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    #content p {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+
+    #content ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    #content ul li {
+        margin-bottom: 10px;
+        padding-left: 10px;
+        line-height: 1.6;
+    }
+
+    #content ul li:before {
+        content: "🔹";
+        padding-right: 10px;
+    }
+    .footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-section {
+        flex: 1;
+        text-align: center;
+    }
+
+    .footer h4 {
+        font-family: Merriweather, serif;
+        margin-bottom: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 5px;
+    }
+    .footer-section p a {
+        color: inherit;
+        text-decoration: none;
+        margin-right: 10px;
+    }
+
+    .footer-section a:hover {
+        color: #ec4899;
+    }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="logo">
+            <img src="infinity_.png">
+            <a href="trangchu.html"><h2>Thần số học</h2></a>
+        </div>
+        <div class="h_menu">
+            <ul>
+                <li><a href="trangchu.html">Trang chủ</a></li>
+                <li><a href="gioithieu.html">Giới thiệu</a></li>
+                <li><a href="tracuu.html" id="menu-lookup" class="active">Tra cứu</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="form">
+        <div class="research">
+            <form>
+                <label for="name">Nhập tên của bạn:</label><br>
+                <input type="text" id="name" name="name" class="input-field"><br>
+                <label for="dob">Nhập ngày tháng năm sinh của bạn:</label><br>
+                <input type="date" id="dob" name="dob" class="input-field"><br>
+                <input type="submit" value="Tra cứu" class="button">
+                <input type="reset" value="Huỷ" class="button">
+            </form>
+        </div>
+    </div>
+    <div id="loading" style="display:none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4); align-items: center; justify-content: center;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 24 24">
+            <g>
+                <circle cx="12" cy="2.5" r="1.5" fill="#ec4899" opacity=".14"/>
+                <circle cx="16.75" cy="3.77" r="1.5" fill="#ec4899" opacity=".29"/>
+                <circle cx="20.23" cy="7.25" r="1.5" fill="#ec4899" opacity=".43"/>
+                <circle cx="21.5" cy="12" r="1.5" fill="#ec4899" opacity=".57"/>
+                <circle cx="20.23" cy="16.75" r="1.5" fill="#ec4899" opacity=".71"/>
+                <circle cx="16.75" cy="20.23" r="1.5" fill="#ec4899" opacity=".86"/>
+                <circle cx="12" cy="21.5" r="1.5" fill="#ec4899"/>
+                <animateTransform attributeName="transform" calcMode="discrete" dur="0.75s" repeatCount="indefinite" type="rotate" values="0 12 12;30 12 12;60 12 12;90 12 12;120 12 12;150 12 12;180 12 12;210 12 12;240 12 12;270 12 12;300 12 12;330 12 12;360 12 12"/>
+            </g>
+        </svg>
+    </div>
+    <div id="notification">
+        <div id="notification-content">
+            <h2 id="notification-text"></h2>
+            <button id="notification-button">Xem</button>
+        </div>
+    </div>
+    <div id="content">
+        <h1>Cách Tra Cứu Thần Số Học</h1>
+        <p>
+            Thần số học là một môn học khám phá và nghiên cứu ý nghĩa, biểu tượng của các con số và những ảnh hưởng của nó đối với đời sống con người.<br>
+             Để tra cứu thần số học dựa vào ngày sinh, bạn có thể tuân theo các bước sau:
+             <ul style="list-style-type: none;">
+                <li>Ghi lại ngày, tháng và năm sinh của bạn: Ví dụ, ngày sinh là 15, tháng sinh là 3, năm sinh là 1990</li>
+                <li>Tính tổng các con số trong ngày, tháng và năm sinh: 15 + 3 + 1990 = 2008</li>
+                <li>Rút gọn ngày sinh: Cộng dồn các con số trong ngày sinh cho đến khi thu được một con số duy nhất. Ví dụ, nếu ngày sinh là 23, bạn sẽ cộng 2 + 3 để thu được 5</li>
+                <li>Rút gọn tháng sinh: Tương tự như rút gọn ngày sinh, bạn cũng cần cộng dồn các con số trong tháng sinh</li>
+                <li>Rút gọn năm sinh: Cộng dồn các con số trong năm sinh</li>
+                <li>Tính số chủ đạo: Cộng dồn các con số đã rút gọn từ ngày, tháng và năm sinh để thu được số chủ đạo</li>
+             </ul>
+             <br>
+             Ví dụ, nếu ngày tháng năm sinh dương lịch của bạn là 23/10/1998. Bạn sẽ cộng từng con số này lại để được một con số tổng, cụ thể: 2 + 3 + 1 + 0 + 1 + 9 + 9 + 8 = 33.
+             <br>Tiếp tục: 3 + 3 = 6. Vậy con số chủ đạo của bạn là số 6
+        </p>
+    </div>
+    <div class="footer">
+        <div class="footer-section">
+            <h4>Giới thiệu</h4>
+            <p>Trang web của chúng tôi cung cấp kiến thức về thần số học và giúp bạn khám phá sức mạnh của số và vận mệnh.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Liên hệ</h4>
+            <p>Email: info@thansohoc.com</p>
+            <p>Số điện thoại: +84 123456789</p>
+        </div>
+        <div class="footer-section">
+            <h4>Theo dõi chúng tôi</h4>
+            <p><a href="#">Facebook</a></p>
+            <p><a href="#">Twitter</a></p>
+            <p><a href="#">Instagram</a></p>
+        </div>
+    </div>
+</html>

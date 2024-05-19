@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var path = window.location.pathname; 
+            $('.h_menu a').each(function(){
+            var href = new URL(this.href).pathname;
+                if(path == href) { 
+                    $(this).closest('li').addClass('active');
+                } else {
+                    $(this).closest('li').removeClass('active');
+                }
+            });
+        });
+    </script>
+    <style>
+    #header{
+        height: 80px;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    .logo {
+        margin-left: 100px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 300px;
+    }
+    .logo a {
+        color: #ec4899;
+        text-decoration: none;
+        font-size: larger;
+    }
+    .h_menu{
+        margin-right: 100px;
+    }
+    .h_menu ul{
+        list-style-type: none;
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+    }
+    .h_menu li{
+        line-height: 40px;
+        height: 40px;
+        width: 140px;
+        margin-left: -5px;
+        display: inline-block;
+        position: relative;
+    }
+    .h_menu a{
+        text-decoration: none;
+        display: block;
+        color: black;
+        font-size: larger;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0,0,0,0)
+    }
+    .h_menu a:hover {
+        background-color: #7e468e;
+        color: rgb(0, 0, 0);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .h_menu a.active {
+        color: #ec4899;
+        border-bottom: 2px solid red;
+    }
+    .h_menu a:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 10px rgba(30, 27, 27, 0.2);
+    }
+    #content{
+        margin-top: 50px;
+        margin-bottom: 40px;
+    }
+    .lookup {
+        background-image: url('anhtc.jpg');
+        padding: 20px;
+        text-align: center;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lookup h1 {
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    .lookup-link {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        color: #fff;
+        background-color: #ec4899;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: 1.2em;
+        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .lookup-link:hover {
+        color: #ec4899;
+        background-color: #fff;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .lookup-link:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 10px rgba(30, 27, 27, 0.2);
+    }
+    .section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-top: 50px;
+    }
+
+    .image-content img {
+        height: 400px;
+        width: 600px;
+        object-fit: cover;
+    }
+    .text-content{
+        color: #000;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        unicode-bidi: isolate;
+        display: block;
+        margin-top: 0;
+        margin-bottom: 1.3rem;
+        line-height: 1.6;
+        font-family: Arial, Helvetica, Helvetica Neue, sans-serif !important;
+    }
+    .text{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .text-content1{
+        color: white;
+        margin-left: 20px;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        unicode-bidi: isolate;
+        display: block;
+        margin-top: 0;
+        margin-bottom: 1.3rem;
+        line-height: 1.6;
+        font-family: Arial, Helvetica, Helvetica Neue, sans-serif !important;
+    }
+    .text-content h2{
+        font-size: 1.5rem;
+    }
+    .text-content2{
+        margin-left: 50px;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        unicode-bidi: isolate;
+        display: block;
+        margin-top: 0;
+        margin-bottom: 1.3rem;
+        line-height: 1.6;
+        font-family: Arial, Helvetica, Helvetica Neue, sans-serif !important;
+    }
+    .text-content2 img{
+        width: 600px;
+        height: 300px;
+        margin-left: 50px;
+    }
+    .footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-section {
+        flex: 1;
+        text-align: center;
+    }
+
+    .footer h4 {
+        font-family: Merriweather, serif;
+        margin-bottom: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 5px;
+    }
+    .footer-section p a {
+        color: inherit;
+        text-decoration: none;
+        margin-right: 10px;
+    }
+
+    .footer-section a:hover {
+        color: #ec4899;
+    }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="logo">
+            <img src="infinity_.png">
+            <a href="trangchu.html"><h2>Thần số học</h2></a>
+        </div>
+        <div class="h_menu">
+            <ul>
+                <li><a href="trangchu.html" >Trang chủ</a></li>
+                <li><a href="gioithieu.html" class="active">Giới thiệu</a></li>
+                <li><a href="tracuu.html" id="menu-lookup">Tra cứu</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="content">
+        <div class="lookup">
+            <h1>Tra cứu thần số học</h1>
+            <a href="tracuu.html" class="lookup-link">Tra cứu thần số học của bạn ngay</a>
+        </div>
+        <div class="section">
+            <div class="text-content">
+                <h2>Thần Số Học Pythagore Có Nghĩa Là Gì?</h2>
+                <p>Thần Số Học Pythagore, hay còn gọi là Nhân số học, là một chuyên ngành nghiên cứu về các con số và sự ảnh hưởng của chúng đối với cá nhân con người và thế giới xung quanh. Nó dựa trên niềm tin rằng có một mối quan hệ thần bí giữa các số và các sự kiện trong đời sống, cũng như sự tương quan giữa số của các chữ cái trong tên và những thứ mang tính tinh thần.</p>
+            </div>
+            <div class="image-content">
+                <img src="anhgt1.jpg" alt="Image description" class="img1" style="margin-left: 20px;">
+            </div>
+        </div>
+        <div class="section" style="background-color: #ec4899;">
+            <div class="image-content">
+                <img src="anhgt2.jpg" alt="Image description" class="img2">
+            </div>
+            <div class="text-content">
+                <h2 style="color: white;">Lịch sử của thần số học</h2>
+                <p style="color: white;">Thần Số Học có nguồn gốc từ thời cổ đại, với những ghi chép sớm nhất xuất hiện ở Ai Cập và Babylon. Nó đã được ứng dụng từ hàng ngàn năm trước ở nhiều nền văn minh khác nhau như La Mã, Trung Quốc, Hy Lạp và Nhật Bản. Phương pháp Thần Số Học Pythagore, được phát triển bởi nhà toán học, khoa học, triết học người Hy Lạp - Pythagoras, là một trong những hệ thống được sử dụng phổ biến nhất hiện nay.</p>
+        </div>
+    </div>
+    <div class="text">
+        <div class="text-content1" style="background-color: rgb(55, 50, 74);">
+            <h2>Khám phá bản thân qua các con số</h2>
+            <p>Theo thần số học, mỗi con số có ý nghĩa và tương ứng với các tính cách, sự kiện hoặc xu hướng trong cuộc đời của một người dựa trên ngày tháng năm sinh và tên của họ.</p>
+            <p>Thần số học giúp bạn khám phá sâu hơn về tính cách của bản thân. Đồng thời, nó còn cho bạn biết bạn là ai, bạn sinh ra trên cuộc đời này với mục đích gì. Khi tìm hiểu về các chỉ số, bạn sẽ biết được những ưu điểm, hạn chế của mình cũng như mọi người xung quanh.</p>
+            <p>Các con số trong thần số học giúp bạn thấu hiểu bản thân toàn diện. Các con số này cho bạn biết về những điều của bản thân mình như: tính cách, ưu điểm, nhược điểm, định hướng công việc,... Bằng cách tìm hiểu và khám phá các đặc điểm này, bạn sẽ có cái nhìn sâu sắc hơn về bản thân mình cũng như mọi người xung quanh.</p>
+            <p>Thần số học không chỉ giúp bạn hiểu rõ hơn về bản thân, mà còn giúp bạn định hình và hướng tới tương lai một cách tích cực hơn.</p>
+            <strong>
+                <span>
+                    <a href="tracuu.html" style="text-decoration: none; font-size: 1.3rem; color: pink;">
+                        Hãy khám phá thần số học và bắt đầu hành trình thấu hiểu bản thân qua các con số ngay hôm nay!
+                    </a>
+                </span>
+            </strong>
+        </div>
+        <div class="text-content2">
+            <h2>Pythagorean là ai?</h2>
+            <p>Không biết các bạn còn nhớ không, khi mà còn ngồi học tại bậc học phổ thông chúng ta đã học các công thức toán học rất quan trọng của ông. Ví dụ: Các công thức tính góc và các góc liên quan đến tam giác vuông. Nhưng mà không phải ai cũng biết Py-ta-go còn là một nhà thần học và một triết gia xuất chúng. Ông đã có những ảnh hưởng to lớn đến các nhà thần học và triết gia khác như Aristotle, Plato…</p>
+            <img src="anhpytago.jpg" alt="Py-ta-go">
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-section">
+            <h4>Giới thiệu</h4>
+            <p>Trang web của chúng tôi cung cấp kiến thức về thần số học và giúp bạn khám phá sức mạnh của số và vận mệnh.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Liên hệ</h4>
+            <p>Email: info@thansohoc.com</p>
+            <p>Số điện thoại: +84 123456789</p>
+        </div>
+        <div class="footer-section">
+            <h4>Theo dõi chúng tôi</h4>
+            <p><a href="#">Facebook</a></p>
+            <p><a href="#">Twitter</a></p>
+            <p><a href="#">Instagram</a></p>
+        </div>
+    </div>
+</body>
+</html>
