@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "icon" href="infinity_.png" type = "image/x-icon">
+    <title>Tính Toán và Luận Giải Chi Tiết Nhất Về Thần Số Học</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var path = window.location.pathname; 
+            $('.h_menu a').each(function(){
+            var href = new URL(this.href).pathname;
+                if(path == href) { 
+                    $(this).closest('li').addClass('active');
+                } else {
+                    $(this).closest('li').removeClass('active');
+                }
+            });
+        });
+    </script>
+    <style>
+    #header{
+        height: 80px;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    .logo {
+        margin-left: 100px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 300px;
+    }
+    .logo a {
+        color: #ec4899;
+        text-decoration: none;
+        font-size: larger;
+    }
+    .h_menu{
+        margin-right: 100px;
+    }
+    .h_menu ul{
+        list-style-type: none;
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+    }
+    .h_menu li{
+        line-height: 40px;
+        height: 40px;
+        width: 140px;
+        margin-left: -5px;
+        display: inline-block;
+        position: relative;
+    }
+    .h_menu a{
+        text-decoration: none;
+        display: block;
+        color: black;
+        font-size: larger;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0,0,0,0)
+    }
+    .h_menu a:hover {
+        background-color: #7e468e;
+        color: rgb(0, 0, 0);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .h_menu a.active {
+        color: #ec4899;
+        border-bottom: 2px solid red;
+    }
+    .h_menu a:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 10px rgba(30, 27, 27, 0.2);
+    }
+    .content {
+        font-family: Arial, sans-serif;
+        width: 80%;
+        margin:0 auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        padding-top: 100px;
+        margin-bottom: 40px;
+    }
+    .content h2 {
+        color: #333;
+        margin-top: 0;
+    }
+    .content p {
+        color: #666;
+        line-height: 1.6;
+    }
+    .footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-section {
+        flex: 1;
+        text-align: center;
+    }
+
+    .footer h4 {
+        font-family: Merriweather, serif;
+        margin-bottom: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 5px;
+    }
+    .footer-section p a {
+        color: inherit;
+        text-decoration: none;
+        margin-right: 10px;
+    }
+
+    .footer-section a:hover {
+        color: #ec4899;
+    }
+</style>
+</head>
+<body>
+    <div id="header">
+        <div class="logo">
+            <img src="infinity_.png">
+            <a href="trangchu.html"><h2>Thần số học</h2></a>
+        </div>
+        <div class="h_menu">
+            <ul>
+                <li><a href="trangchu.html" >Trang chủ</a></li>
+                <li><a href="gioithieu.html">Giới thiệu</a></li>
+                <li><a href="tracuu.html" id="menu-lookup"class="active">Tra cứu</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div style="position: relative; height: 500px;">
+            <img src="so6.jpg" alt="" style="width: 500px; height: 500px; object-fit: cover; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        </div>
+        <h1 style="text-align: center;">Ý nghĩa của con số 6 đối với bạn</h1>
+        <h2>Tính cách</h2>
+        <p>Gia đình, quan tâm, chăm sóc, chiều chuộng, sức hút. </p>
+        <p>Lý tưởng hóa tình cảm, giúp đỡ, phát triển, trách nhiệm. </p>
+        <p>Hòa bình, bao dung. </p>
+        <p>Buôn chuyện, bỡn cợt, ôm đồm, hống hách, ích kỷ. </p>
+        <h2>Điểm mạnh của bạn</h2>
+        <p>Bạn thường dễ rung động trước cái đẹp, dù đó là vẻ đẹp của phong cảnh, đồ vật hay vẻ đẹp của con người. Bạn dễ xúc động trước những hoàn cảnh đáng thương, éo le; bạn cũng dễ xúc động trước những sự yêu thương, chăm sóc, khen ngợi dành cho bạn.</p>
+        <p>Bạn sẵn lòng giúp đỡ người khác một cách chân thành. Thường thì chỉ cần mọi người mở lời xin sự giúp đỡ là bạn sẽ đồng ý, nhất là những người gần gũi hoặc thân thiết với bạn. Hãy cẩn thận với điều đó, vì bạn có thể quên mất những việc cần làm của bản thân và trở nên bao đồng, bao bọc, thậm chí làm hư những người gần gũi với bạn.</p>
+        <p>Bạn là những phụ huynh bẩm sinh, người luôn quan tâm đến người khác dưới cái nhìn của bậc làm cha làm mẹ. Dù có giận người ta đến đâu, chỉ cần họ thể hiện sự biết lỗi hoặc hòa giải, bạn sẵn lòng bỏ qua. Bạn còn có thể rất áy náy nếu thấy có lỗi với ai đó. Bạn yêu quý thú cưng, trẻ nhỏ, người trẻ tuổi và những thứ mang tính “trẻ”. </p>
+        <p>Bạn là người có khiếu thẩm mỹ hoặc nghệ thuật. Bạn có thể vẽ đẹp, viết tốt, sáng tác hay; bạn có thể có đôi tai biết thưởng thức và khứu giác rất tinh nhạy. Bạn thích làm cho mọi người và mọi vật đẹp lên. - Bạn cũng là người không thích làm việc dưới trướng người khác, nhất là khi năng lực của bạn đã phát triển đến tầm nhất định. Bạn không thích bị người khác sai khiến, chỉ trích. Bạn rất coi trọng “thể diện”. Bạn cũng thường là người thẳng thắn và có chính kiến.</p>
+        <p>Là những người yêu thương con người, bạn rất ghét sự bất công, với mọi hình thức. </p>
+        <h2>Điểm yếu của bạn</h2>
+        <p>Bạn là những người đầy lòng yêu thương, không ích kỷ, và dễ bao dung, nhưng phải hết sức để ý để không bị lợi dụng lòng tốt của mình. </p>
+        <p>Là người tình cảm và giàu lòng yêu thương, nhưng nếu ai đó phản bội, hoặc bạn thấy mình trở thành gánh nặng với người khác, bạn sẽ rất lạnh lùng và rút lui. Đôi khi bạn cũng hay sốt ruột, và có thể nói ra những điều không đúng thời điểm. </p>
+        <p>Đôi khi bạn có thể lâm vào thói buôn chuyện nếu rảnh rỗi; bạn cũng cần cẩn thận với việc bàn luận, phán xét về người khác. </p>
+        <p>Bạn thường giỏi giao tiếp với trẻ em và động vật thông qua năng lượng dịu dàng và chở che. Nhưng không phải cái gì cũng cần được chăm nom, vì vậy đôi khi năng lượng bảo vệ của bạn có thể trở nên độc đoán và thích kiểm soát. Để tránh gánh cả thế giới trên vai, bạn phải học cách xây dựng niềm tin và sự cảm thông.</p>
+        <p>Nói một cách đơn giản, bạn hãy nhớ rằng: Ai cũng phải tự bước đi trên con đường đời của mình.</p>
+        <h2>Những người nổi tiếng có con số 6</h2>
+        <p>Chủ tịch Hồ Chí Minh </p>
+        <p>Vũ Đức Đam – Cựu phó Thủ tướng Chính phủ Việt Nam. </p>
+        <p>Jeff Beros – Chủ tịch tập đoàn Amazon. </p>
+        <p>Warren Buffet – Nhà đầu tư tài ba.</p>
+        <p>Một vài người khác như: Albert Einstein, John Lennon, Michael Jackson, Bruce Willis, Robert De Niro, Stevie Wonder, Richard Nixon, Ben Affleck ,..</p>
+        <h2>Mối quan hệ tương thích</h2>
+        <strong>Những số đường đời tương thích nhất với bạn: Số 2, 3, 4, 8 và số 9</strong>
+        <p>Số 2: Số 6 và 2 được cho là một trong những cặp số đẹp nhất trong Thần số học, đều là những người sống thiên về cảm xúc nhiều hơn là lý trí. Trong khi số 6 luôn hướng về gia đình thì mục đích duy nhất của số 2 cũng là yêu thương và quan tâm đến những người xung quanh. Như vậy, có thể thấy năng lượng của hai bạn có sự đồng điệu và hoà hợp với nhau.</p>
+        <p>Số 3: Số 6 và số 3 có sức hút mạnh mẽ với nhau. Bạn bị thu hút bởi sự cởi mở và năng lượng tích cực của số 3 trong khi số 3 bị thu hút bởi lòng trắc ẩn và sự ấm áp, quan tâm của số 6.</p>
+        <p>Số 4: Cả hai bạn đều là những người thực tế, có tinh thần trách nhiệm cao và hướng về gia đình, vì vậy, mối quan hệ sẽ có sự thấu hiểu và dễ dàng đồng hành cùng nhau. </p>
+        <p>Số 8: Bạn là người sống tình cảm. Gia đình luôn là mối quan tâm và ưu tiên hàng đầu trong cuộc sống của bạn. Bên cạnh đó, số 8 là người nhạy bén đối với tiền tài, quyền lực, luôn nỗ lực mang lại sự ổn định tài chính trong gia đình. Vì vậy, đây tưởng chừng là một cặp số đối đầu nhưng thực tế là một sự kết hợp bù trừ tốt khi một người vun vén hạnh phúc, chăm sóc, lo toan cho tổ ấm; người kia mong muốn mang đến một cuộc sống no đủ, sung túc cho những người thân yêu, cùng nhau xây dựng nên một gia đình hạnh phúc, ấm áp, no đủ.</p>
+        <p>Số 9: Khi đồng hành cùng nhau, cả hai bạn là đều là những người nhận thức được nhu cầu tình cảm, thể chất và tinh thần của đối phương. Ngoài ra, hai bạn còn tìm được sự đồng điệu về bản chất hy sinh và lòng trắc ẩn</p>
+        <strong>Những số đường đời ít tương thích nhất với bạn: Số 1, 5 và số 7 </strong>
+        <p>Số 1: Bạn và số 1 có những mục tiêu và mối bận tâm hoàn toàn khác nhau, do đó hai bạn sẽ nhìn về hai hướng khác nhau trong cuộc sống. Điều quan trọng nhất với bạn là gia đình, tình yêu và sự vị tha. Tuy nhiên, số 1 quan tâm nhiều đến công việc, sự tranh đua, mạo hiểm và mong muốn được đứng đầu. Điều này ở số 1 khiến bạn cảm thấy hai bạn rất khó để thấu hiểu nhau và hòa hợp với nhau. </p>
+        <p>Số 5: Hai bạn rất khó tìm được sự đồng điệu ở đối phương trong cuộc sống. Số 5 là người yêu thích tự do và trải nghiệm, ghét sự ràng buộc. Trong khi đó, số 6 rất coi trọng tình cảm và luôn hướng về gia đình, có xu hướng kiểm soát đối phương. Vì vậy, nếu kết hợp cùng nhau, rất nhiều mâu thuẫn có thể sẽ phát sinh giữa hai bạn. </p>
+        <p>Số 7: Sự kết hợp giữa hai bạn chứa đầy những vấn đề xung quanh mọi ngóc ngách. Trong khi số 6 là người sống cảm xúc và coi trọng tình cảm, có xu hướng kiểm soát đối phương thì số 7 là những người sống cô độc và hướng nội, thích có những khoảng không gian của riêng mình. Vì vậy, hai bạn có sự đối lập lớn trong tính cách. Hãy nhớ rằng khả năng tương thích trong các mối quan hệ của bạn còn sâu sắc hơn những gì thể hiện ở con số đường đời.</p>
+        <h2>Màu sắc phù hợp:</h2>
+        <strong>Màu vàng:</strong> <p> Màu vàng thường liên quan đến sự sáng sủa, tinh thần lạc quan và tạo ra cảm giác ấm áp. Nó có thể biểu thị sự tương tác xã hội tích cực và sự hòa hợp.</p>
+        <strong>Màu trắng:</strong><p> Màu trắng thường liên quan đến sự trong sáng, thuần khiết và hòa bình. Nó có thể biểu thị sự tinh khiết và sự hòa hợp.</p>
+        <strong>Màu xanh lam:</strong><p>Màu xanh lam thường biểu thị sự sáng tạo, sự thư thái và sự cân bằng. Nó có thể liên quan đến sự sâu sắc và sự phát triển.</p>
+        <strong>Màu hồng: </strong> <p>Màu hồng thường liên quan đến tình yêu, sự dịu dàng và tình cảm. Nó có thể biểu thị sự tương tác xã hội và sự tình cảm.</p>
+        <h2>Nghề nghiệp phù hợp</h2>
+        <strong>Nhóm ngành Quản lý:</strong>
+        <p>Giám đốc điều hành: Đây là một vị trí cấp cao trong doanh nghiệp, là người trực tiếp điều hành – quản lý – đưa ra tầm nhìn và phát triển những giá trị vốn có của công ty.</p>
+        <p>Giám đốc nhân sự: Giám đốc nhân sự chính là người quyết định mọi vấn đề từ tuyển dụng, đào tạo, lương thưởng,… cho mọi nhân sự trong công ty.</p>
+        <strong>Nhóm ngành Xã hội:</strong>
+        <p>Sư phạm mầm non: Nếu sự yêu thương quan tâm của bạn gắn liền với tình yêu trẻ, chắc chắn sư phạm mầm non sẽ là công việc không thể bỏ qua. Khi làm công việc này, bạn sẽ được đắm chìm trong thế giới của trẻ thơ, được dẫn dắt các em nhỏ và quan tâm chăm sóc chúng mỗi ngày.</p>
+        <p>Nhân viên khách sạn: Nhân viên khách sạn có rất nhiều vị trí khác nhau, từ lễ tân, buồng phòng cho tới các dịch vụ khác.</p>
+        <p>Nhà tâm lý học đường: Nắm bắt tâm lý người khác do khả năng quan sát, lắng nghe, cảm nhận chính là điểm mạnh của Thần số học số 6 nghề nghiệp.</p>
+    </div>
+    <div class="footer">
+        <div class="footer-section">
+            <h4>Giới thiệu</h4>
+            <p>Trang web của chúng tôi cung cấp kiến thức về thần số học và giúp bạn khám phá sức mạnh của số và vận mệnh.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Liên hệ</h4>
+            <p>Email: info@thansohoc.com</p>
+            <p>Số điện thoại: +84 123456789</p>
+        </div>
+        <div class="footer-section">
+            <h4>Theo dõi chúng tôi</h4>
+            <p><a href="#">Facebook</a></p>
+            <p><a href="#">Twitter</a></p>
+            <p><a href="#">Instagram</a></p>
+        </div>
+    </div>
+</body>
+</html>

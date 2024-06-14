@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "icon" href="infinity_.png" type = "image/x-icon">
+    <title>Tính Toán và Luận Giải Chi Tiết Nhất Về Thần Số Học</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var path = window.location.pathname; 
+            $('.h_menu a').each(function(){
+            var href = new URL(this.href).pathname;
+                if(path == href) { 
+                    $(this).closest('li').addClass('active');
+                } else {
+                    $(this).closest('li').removeClass('active');
+                }
+            });
+        });
+    </script>
+    <style>
+    #header{
+        height: 80px;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    .logo {
+        margin-left: 100px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 300px;
+    }
+    .logo a {
+        color: #ec4899;
+        text-decoration: none;
+        font-size: larger;
+    }
+    .h_menu{
+        margin-right: 100px;
+    }
+    .h_menu ul{
+        list-style-type: none;
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+    }
+    .h_menu li{
+        line-height: 40px;
+        height: 40px;
+        width: 140px;
+        margin-left: -5px;
+        display: inline-block;
+        position: relative;
+    }
+    .h_menu a{
+        text-decoration: none;
+        display: block;
+        color: black;
+        font-size: larger;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0,0,0,0)
+    }
+    .h_menu a:hover {
+        background-color: #7e468e;
+        color: rgb(0, 0, 0);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .h_menu a.active {
+        color: #ec4899;
+        border-bottom: 2px solid red;
+    }
+    .h_menu a:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 10px rgba(30, 27, 27, 0.2);
+    }
+    .content {
+        font-family: Arial, sans-serif;
+        width: 80%;
+        margin:0 auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        padding-top: 100px;
+        margin-bottom: 40px;
+    }
+    .content h2 {
+        color: #333;
+        margin-top: 0;
+    }
+    .content p {
+        color: #666;
+        line-height: 1.6;
+    }
+    .footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-section {
+        flex: 1;
+        text-align: center;
+    }
+
+    .footer h4 {
+        font-family: Merriweather, serif;
+        margin-bottom: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 5px;
+    }
+    .footer-section p a {
+        color: inherit;
+        text-decoration: none;
+        margin-right: 10px;
+    }
+
+    .footer-section a:hover {
+        color: #ec4899;
+    }
+</style>
+</head>
+<body>
+    <div id="header">
+        <div class="logo">
+            <img src="infinity_.png">
+            <a href="trangchu.html"><h2>Thần số học</h2></a>
+        </div>
+        <div class="h_menu">
+            <ul>
+                <li><a href="trangchu.html" >Trang chủ</a></li>
+                <li><a href="gioithieu.html">Giới thiệu</a></li>
+                <li><a href="tracuu.html" id="menu-lookup"class="active">Tra cứu</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div style="position: relative; height: 500px;">
+            <img src="so9.jpg" alt="" style="width: 500px; height: 500px; object-fit: cover; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        </div>
+        <h1 style="text-align: center; color: #ec4899;">Ý nghĩa của con số 9 đối với bạn</h1>
+        <h2>Tính cách</h2>
+        <p>Con số 9 thường được liên kết với lòng nhân ái và tình yêu thương sâu sắc. Những người mang con số này thường có tâm hồn rộng lớn, sẵn sàng giúp đỡ và chia sẻ với người khác.</p>
+        <p>Họ có khả năng cảm thông và thấu hiểu, luôn tìm cách để làm cho thế giới trở nên tốt đẹp hơn. Sự sáng tạo và nghệ thuật cũng là những đặc điểm nổi bật của con số này.</p>
+        <p>Con số 9 còn biểu thị cho sự chuyển đổi và phát triển, họ không ngại thay đổi và luôn hướng tới sự hoàn thiện bản thân.</p>
+        <h2>Điểm mạnh của bạn</h2>
+        <p>Bạn có khả năng truyền cảm hứng và thúc đẩy sự thay đổi tích cực trong cộng đồng. Sự nhạy cảm và tình yêu thương giúp bạn trở thành nguồn động viên mạnh mẽ cho những người xung quanh.</p>
+        <p>Bạn cũng có tài năng nghệ thuật và sáng tạo, có thể thể hiện qua nhiều hình thức như âm nhạc, hội họa, viết lách, hoặc qua công việc hàng ngày.</p>
+        <h2>Điểm yếu của bạn</h2>
+        <p>Do lòng nhân ái quá lớn, đôi khi bạn có thể quên mất bản thân mình trong quá trình giúp đỡ người khác. Bạn cần học cách cân bằng giữa việc chăm sóc người khác và chăm sóc bản thân.</p>
+        <h2>Những người nổi tiếng có con số 9</h2>
+        <p>Mother Teresa</p>
+        <p>Mahatma Gandhi</p>
+        <p>Bob Marley</p>
+        <p>Một vài người khác như:Yoko Ono, Elvis Presley, Aishwariya Rai, Sanjay Dutt, Salman Khan, Saif Ali Khan, Vinod Khanna</p>
+        <h2>Mối quan hệ tương thích</h2>
+        <strong>Những số đường đời tương thích nhất với bạn: Số 2, 3 và số 6</strong>
+        <p>Số 2: Sự kết hợp giữa số 9 và số 2 tạo nên một mối quan hệ hài hòa, nơi cả hai đều chia sẻ lòng trắc ẩn và sự quan tâm sâu sắc đến người khác. Số 9 với tình yêu thương rộng lớn và số 2 với sự nhạy cảm, cả hai cùng nhau tạo nên một môi trường tình cảm ấm áp và chăm sóc lẫn nhau.</p>
+        <p>Số 3: Số 9 và số 3 có một mối quan hệ đầy sức sống và sáng tạo. Số 9, với khát vọng phục vụ và số 3 với tài năng nghệ thuật, cả hai cùng nhau khuyến khích và hỗ trợ sự phát triển của đối phương trong nhiều lĩnh vực.</p>
+        <p>Số 6: Số 9 và số 6 tạo nên một cặp đôi hoàn hảo, nơi mỗi người đều có khả năng hiểu và chăm sóc cho đối phương. Số 9 mang lại tầm nhìn lý tưởng và số 6 cung cấp sự ổn định và hỗ trợ, tạo nên một mối quan hệ bền vững và đầy yêu thương.</p>
+        <strong>Những số đường đời ít tương thích nhất với bạn: Số 1, 4 và số 8 </strong>
+        <p>Số 1: Số 9 và số 1 có những mục tiêu và cách nhìn đối lập về cuộc sống. Số 1 sống rất độc lập và luôn có định hướng cho mục tiêu của mình. Số 9 không tham vọng nghề nghiệp và thường tiêu tiền của mình cho cộng đồng, điều này khiến số 1 phát điên. Nhìn chung, mối quan hệ này chắc chắn sẽ khiến cả hai con số này đau khổ và sẽ không kéo dài được lâu.</p>
+        <p>Số 4: Số 4 tập trung toàn bộ năng lượng của mình để leo lên nấc thang sự nghiệp và có được sự ổn định về tài chính. Họ không đánh giá cao những mối quan tâm về nhân đạo của số 9.</p>
+        <p>Số 8: Số 8 cũng tập trung toàn bộ năng lượng của mình để leo lên nấc thang sự nghiệp và có được sự ổn định về tài chính. Họ không đánh giá cao những mối quan tâm về nhân đạo của số 9.</p>
+        <h2>Màu sắc phù hợp:</h2>
+        <p>Màu đỏ được liên kết chặt chẽ với niềm đam mê, đại diện cho khía cạnh gợi cảm và tình cảm của số chủ đạo này.</p>
+        <p>Màu này không bao giờ nhàm chán, nó tỏa ra năng lượng mạnh mẽ thúc đẩy bạn hành động để đạt được mục tiêu.</p>
+        <h2>Nghề nghiệp phù hợp</h2>
+        <p>Con số 9 thường liên kết với những nghề nghiệp có tác động tích cực đến xã hội và cộng đồng. Dưới đây là một số nghề nghiệp phù hợp cho những người mang con số 9:</p>
+        <p>Công tác xã hội: Với lòng nhân ái và khát vọng giúp đỡ người khác, số 9 phù hợp với các công việc trong lĩnh vực công tác xã hội, từ thiện và phi lợi nhuận.</p>
+        <p>Giáo dục: Số 9 có khả năng truyền cảm hứng và giáo dục, làm cho nghề giáo viên hoặc giảng viên đại học trở thành lựa chọn tốt.</p>
+        <p>Y tế:Sự quan tâm và lòng trắc ẩn của số 9 làm cho họ trở thành những bác sĩ, y tá, hoặc nhà tâm lý học xuất sắc.</p>
+        <p>Nghệ thuật và sáng tạo: Số 9 cũng thường có tài năng nghệ thuật, vì vậy họ có thể thành công trong các lĩnh vực như viết lách, hội họa, âm nhạc, hoặc thiết kế.</p>
+    </div>
+    <div class="footer">
+        <div class="footer-section">
+            <h4>Giới thiệu</h4>
+            <p>Trang web của chúng tôi cung cấp kiến thức về thần số học và giúp bạn khám phá sức mạnh của số và vận mệnh.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Liên hệ</h4>
+            <p>Email: info@thansohoc.com</p>
+            <p>Số điện thoại: +84 123456789</p>
+        </div>
+        <div class="footer-section">
+            <h4>Theo dõi chúng tôi</h4>
+            <p><a href="#">Facebook</a></p>
+            <p><a href="#">Twitter</a></p>
+            <p><a href="#">Instagram</a></p>
+        </div>
+    </div>
+</body>
+</html>
